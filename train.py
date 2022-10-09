@@ -6,7 +6,7 @@ from torch.utils.data import Dataset, DataLoader
 from nltk_utils import *
 from model import NeuralNet
 
-with open('data/test.json', 'r') as f:
+with open('data/data-new.json', 'r') as f:
     intents = json.load(f)
 
 all_words = []
@@ -49,7 +49,7 @@ for (pattern_sentence, tag) in xy:
 X_train = np.array(X_train)
 y_train = np.array(y_train)
 
-num_epochs = 1000
+num_epochs = 500
 batch_size = 8
 learning_rate = 0.001
 input_size = len(X_train[0])
@@ -96,7 +96,7 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
 
-    if (epoch+1) % 100 == 0:
+    if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
 

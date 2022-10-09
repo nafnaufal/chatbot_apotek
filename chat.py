@@ -7,7 +7,7 @@ from nltk_utils import bag_of_words, tokenize
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('data/test.json', 'r') as json_data:
+with open('data/data-new.json', 'r') as json_data:
     intents = json.load(json_data)
 
 FILE = "data.pth"
@@ -24,7 +24,7 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-sentence = 'tunjukkan erha5'
+sentence = 'corrector skin'
 
 sentence = tokenize(sentence)
 X = bag_of_words(sentence, all_words)
@@ -38,7 +38,7 @@ tag = tags[predicted.item()]
 
 probs = torch.softmax(output, dim=1)
 prob = probs[0][predicted.item()]
-if prob.item() > 0.50:
+if prob.item() > 0.70:
     for intent in intents['intents']:
         if tag == intent["tag"]:
             print(f"{intent['responses']}")
