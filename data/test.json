@@ -1,0 +1,24 @@
+{
+    "intents": [
+        {
+            "tag": "erha4",
+            "patterns": [
+                "moisturizer erha4 15gram"
+            ],
+            "responses": [
+                "Berikut Informasi mengenai *Moisturizer ERHA 4* - 15gr\n\nKegunaan : \nMelembabkan kulit, mencerahkan kulit, membantu mengembalikan kekenyalan kulit\n\nCara Pakai : \nDioles pada wajah yang bersih setelah memakai toner di pagi hari\n\nCara Penyimpanan : \nPada suhu dingin 10-15 C/ 15-20 C dan disimpan di cooler/ kulkas pada bagian pintu."
+            ]
+        },
+        {
+            "tag": "erha5",
+            "patterns": [
+                "erha5 evening for sensitive skin 10gram",
+                "sensitive",
+                "erha5 evening"
+            ],
+            "responses": [
+                "Berikut Informasi mengenai *Erha 5 Evening Moisturizer for Sensitive Skin* 10 g\n\nKegunaan : \nMoisturizer malam untuk kulit sensitif\n\nCara Pakai : \nDioles pada wajah yang bersih setelah memakai toner\n\nCara Penyimpanan : \nDi suhu ruangan yang sejuk\n\nSuhu :\n10-15 C/ 15-20 C"
+            ]
+        }
+    ]
+}
